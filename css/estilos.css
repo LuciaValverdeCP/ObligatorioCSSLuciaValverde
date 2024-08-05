@@ -1,0 +1,541 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body{
+    background-image: linear-gradient(to bottom, white,#fbe2c0, #95e1fc);
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+h1, h2{
+    font-size: 40px;
+    text-align: center;
+
+    width: 100%;
+}
+
+h3{
+    font-size: 20px;
+    text-align: center;
+}
+
+h4{
+    font-size: 14px;
+    color: rgb(96, 90, 90);
+    text-align: left;
+}
+
+/********************************************************************************LOGO E IMAGEN********************************************************************************/
+header figure img{
+    width: 180px;
+}
+
+header nav ul{
+    /*saco puntos de la lista*/
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+header nav ul li{
+    margin: 2px;
+    width: 120px;
+}
+
+header nav ul li a{
+    /*color fondo*/
+    background-color: black;
+    /*cambiar a bloque*/
+    display: block;
+    /*color letra*/
+    color: white;
+    /*separacion de letras*/
+    letter-spacing: 1px;
+    /*relleno*/
+    padding: 4px;
+    /*pasar a mayuscula*/
+    text-transform: uppercase;
+    /*centrar texto*/
+    text-align: center;
+    /*quitar subrayado en el menu*/
+    text-decoration: none;
+    /*borde*/
+    border: 3px solid black;
+}
+
+header nav ul li a:hover{
+    background-color: white;
+    color: black;
+}
+
+header .ContactoBoton{
+    background-color: rgb(239, 77, 77);
+    border-radius: 20px;
+    border-color: rgb(239, 77, 77);
+
+}
+
+#menu-principal .contenedor{
+    display: flex;
+    justify-content: space-between;/*alinea horizontalmente*/
+    align-items: center;/*alinea verticalmente*/
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto; /*otra forma de centrar*/
+    margin-top: 20px;
+}
+
+/********************************************************************************FOTO DESLIZANTE********************************************************************************/
+
+main .div1, #div2, #div3, #div4{
+    min-width: 1200px;
+    height: 350px;
+    margin: 20px 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.div1{
+    background-image: url("../img/desli1.webp");
+    margin: 0 0 20px 0;
+}
+
+#div2{
+    background-image: url("../img/desli2.webp");
+}
+
+#div3{
+    background-image: url("../img/desli4.webp");
+}
+
+#div4{
+    background-image: url("../img/back2.avif");
+}
+
+/********************************************************************************ANIMACION DE ENTADA********************************************************************************/
+
+main .titulo{
+    width: 300px;
+    display: absolute;
+    transform: translate(0, 100px);
+    color: transparent;
+    animation: moverse 10s forwards;
+}
+
+main .titulo2{
+    transform: translate(0, 100px);
+    color: transparent;
+    animation: moverse2 10s forwards;
+}
+
+@keyframes moverse {
+    From{
+        font-size: 0;
+        width: 100%;
+    }
+    to{
+        font-size: 60px;
+        width: 100%;
+        color: white;
+    }
+}
+
+@keyframes moverse2 {
+    From{
+        font-size: 0;
+        width: 100%;
+    }
+    to{
+        max-width: 1200px;
+        margin: 0 auto;
+        font-size: 20px;
+        width: 100%;
+        color: rgb(205, 203, 203);
+    }
+}
+
+/********************************************************************************NOTICIAS********************************************************************************/
+
+#Articulo{
+    width: 1200px;
+    /*centra las novedades*/
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap; /*Permite el salto de linea/la doble linea*/
+    justify-content: space-between; /*el espacio sobrante lo divide entre la cantidad de espacios y esto vendria ser eso*/
+}
+
+#Articulo article{
+    width: 380px;
+}
+
+#Articulo article figure{
+    position: relative;
+}
+
+#Articulo article figure img{
+    width: 380px;
+    height: 220px; /*ajusta el tamano de la imagen*/
+}
+
+#Articulo article figure span{
+    background-color: rgb(249, 33, 33);
+    color : rgb(255, 255, 255);
+    display: block;
+    padding: 5px;
+    width: 50px;
+    text-align: center;
+    font-size: 12px;
+    font-family: "Bebas Neue", sans-serif;
+    letter-spacing: 1px;
+    bottom: 15px;
+    right: 10px;
+    position: absolute;
+}
+
+#Articulo article figure .span1{
+    background-image: url(../img/banderas/chile.png);
+    color: black;
+    position: absolute;
+    width: 50px; /* Ancho del span */
+    height: 25px; /* Alto del span */
+    background-size: cover; /* Ajustar imagen para cubrir el span */
+    background-position: center; /* Centra la imagen */
+}
+
+main .boton{
+    background-color: black;
+    color: white;
+    letter-spacing: 1px;
+    padding: 4px;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    border: 3px solid black;
+    width: 150px;
+    height: 40px;
+    margin: 12px auto;
+    border-radius: 30px;
+    cursor: pointer;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 15px;
+}
+
+main .boton:hover{
+    background-color: white;
+    color: black;
+}
+
+/********************************************************************************GRILLA********************************************************************************/
+
+#Grilla{
+    width: 1200px;
+    /*centra las novedades*/
+    margin: 0 auto;
+
+    display: flex;
+    flex-wrap: wrap; /*Permite el salto de linea/la doble linea*/
+    justify-content: space-between;
+}
+
+.ArticulosGrilla{
+    width: 280px;
+    letter-spacing: 1px;
+}
+
+#Grilla article h3, h4{
+    text-align: center;
+    text-decoration: none;
+}
+
+.ArticulosGrilla figure img{
+    width: 100%; /*ajusta el tamano de la imagen*/
+    border-top-left-radius: 40%;
+    border-bottom-right-radius: 40%;
+}
+
+#Grilla table{
+    width: 580px;
+}
+
+table td{   
+    table-layout: fixed;
+    width: 100px;
+    border: 2px solid rgba(133, 130, 133, 0.718);
+    text-align: left;
+}
+
+main .red{
+    width: 300px;
+}
+
+main .Fecha, .horarios{
+    text-align: center;
+}
+
+main .bandera1,.bandera3, .bandera4, .bandera5, 
+.bandera6, .bandera7, .bandera8, .bandera9 {
+    width: 12%;
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+}
+
+.bandera1 {
+    background-image: url(../img/banderas/estadosunidos.avif);
+}
+
+.bandera3 {
+    background-image: url(../img/banderas/espana.png);
+}
+
+.bandera4 {
+    background-image: url(../img/banderas/colombia.png);
+}
+
+.bandera5 {
+    background-image: url(../img/banderas/brasil.png);
+}
+
+.bandera6 {
+    background-image: url(../img/banderas/chile.png);
+}
+
+.bandera7 {
+    background-image: url(../img/banderas/peru.png);
+}
+
+.bandera8 {
+    background-image: url(../img/banderas/mexico.png);
+}
+
+.bandera9 {
+    background-image: url(../img/banderas/nueva\ zelanda.png);
+    width: 13%;
+}
+
+/********************************************************************************Entradas********************************************************************************/
+
+#Entrada{
+    width: 1200px;
+    /*centra las entradas*/
+    margin: 0 auto;
+
+    display: flex;
+    flex-wrap: wrap; /*Permite el salto de linea/la doble linea*/
+    justify-content: space-between;
+}
+
+.articuloEntrada{
+    width: 280px;
+    letter-spacing: 1px;
+}
+.articuloEntrada figure{
+    margin-bottom: 20px;
+}
+
+.articuloEntrada nav ul{
+    text-align: center;
+    list-style-position: inside;
+    text-decoration: none;
+}
+
+.articuloEntrada a{
+    width: 150px;
+    margin-top: 20px;
+    text-decoration: none;
+    margin-left: auto;
+    display: block;
+    text-align: center;
+    padding-top: 7px;
+}
+
+#boton1{
+    margin-top: 18px;
+}
+
+.articuloEntrada figure img{
+    width: 100%;
+    border-radius: 50%;
+}
+
+.articulo2Entrada{
+    width: 550px;
+}
+.articulo2Entrada figure img{
+    width: 100%; /*ajusta el tamano de la imagen*/
+    
+    height: 485px;
+}
+
+.luna {
+    animation: girar 20s infinite;
+}
+  
+@keyframes girar {
+    0% {
+      transform: rotate(0);
+    }
+    25%{
+        transform: rotate(120deg);
+    }
+    50%{
+        transform: rotate(240deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+/*********************************************************************************Galeria********************************************************************************/
+
+
+#Galeria img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /*ajustar al tamaño del contenedor a la imagen*/
+}
+
+#Galeria{
+
+    width: 1200px;
+
+    /*centre*/
+    margin: 0 auto;
+
+    /*declaro que es una grilla #*/
+    display: grid;
+
+    /*SEPARADOR*/
+    gap: 10px 10px;
+    /*   row   column*/
+
+    grid-template-columns: repeat(4, 1fr); /*repite 4 veces 1fr*/
+    grid-template-rows: auto 200px 100px 150px 100px; /*filas*/
+
+    grid-template-areas: " titulo titulo titulo titulo"
+                         " f1      f1       f3      f4"
+                         " f2      f2       f3      f4"
+                         " f2      f2       f3      f5"
+                         " f2      f2       f3      f5";
+}
+
+#Galeria h2{
+    grid-area: titulo;
+}
+#Galeria .f1{
+    grid-area: f1;
+}
+#Galeria .f2{
+    grid-area: f2;
+}
+#Galeria .f3{
+    grid-area: f3;
+}
+#Galeria .f4{
+    grid-area: f4;
+}
+#Galeria .f5{
+    grid-area: f5;
+}
+
+/********************************************************************************Formulario********************************************************************************/
+
+#Contacto{
+    min-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    background-image: linear-gradient(to bottom, rgb(138, 228, 255), rgb(249, 225, 103));
+}
+
+#Contacto h2{
+    margin-top: 20px;
+}
+
+form{
+    width: 1200px;
+    margin: 16px auto;
+}
+
+input, select{
+    display: block;
+    width: 100%;
+    margin-bottom: 16px;
+    border: solid;
+    padding: 12px;
+    background-color: #93e2ff;
+}
+
+.columnas{
+    width: 900px;
+    margin: 0 auto;
+    display: grid;
+    align-items: center;
+    justify-content: space-between;
+    grid-template-columns: repeat(3, 300px);
+    gap: 16px;
+}
+
+.boton1{
+    background-color: black;
+    display: block;
+    color: white;
+    letter-spacing: 1px;
+    padding: 4px;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    border: 3px solid black;
+    width: 932px;
+    height: 40px;
+    margin: auto;
+    cursor: pointer;
+}
+
+main .boton1:hover{
+    background-color: rgb(159, 244, 140);
+    color: black;
+    border-color: rgb(68, 255, 26);
+}
+
+/********************************************************************************Footer********************************************************************************/
+
+footer{
+    min-width: 1200px;
+    background-color: rgb(255, 255, 255);
+    padding: 10px; 
+}
+
+footer p{
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+footer figure{
+    width: 32px;
+    height: 32px;
+    position: fixed;
+    bottom: 4px;
+    right: 60px;
+}
+
+footer .flecha{
+    bottom: 4px;
+    right: 20px;
+}
